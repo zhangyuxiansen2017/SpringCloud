@@ -1,10 +1,6 @@
-cn\zhangguimin\entitys\DepartmentExample.class
-cn\zhangguimin\entitys\Employee.class
-cn\zhangguimin\entitys\EmployeeExample$Criteria.class
-cn\zhangguimin\entitys\DepartmentExample$GeneratedCriteria.class
-cn\zhangguimin\entitys\DepartmentExample$Criterion.class
 cn\zhangguimin\entitys\EmployeeExample.class
-cn\zhangguimin\entitys\Department.class
-cn\zhangguimin\entitys\DepartmentExample$Criteria.class
+cn\zhangguimin\entitys\Employee.class
 cn\zhangguimin\entitys\EmployeeExample$GeneratedCriteria.class
+cn\zhangguimin\service\EmpClientService.class
+cn\zhangguimin\entitys\EmployeeExample$Criteria.class
 cn\zhangguimin\entitys\EmployeeExample$Criterion.class

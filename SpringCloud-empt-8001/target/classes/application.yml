@@ -9,28 +9,29 @@ mybatis:
     
 spring:
    application:
-    name: SpringCloud-dept 
+    name: SpringCloud-empt 
    datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://localhost:3306/ssm_crud              # 数据库名称
+    url: jdbc:mysql://localhost:3306/ssm_crud_01              # 数据库名称
     username: root
     password: 1991820
     dbcp2:
       min-idle: 5                                           # 数据库连接池的最小维持连接数
       initial-size: 5                                       # 初始化连接数
       max-total: 5                                          # 最大连接数
-      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      max-wait-millis: 2000                                  # 等待连接获取的最大超时时间
 #客户端注册进eureka服务列表内
 eureka:
   client: 
     service-url: 
-      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://localhost:7001/eureka
+       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
   instance:
-    instance-id: microservicecloud-dept8001
+    instance-id: SpringCloud-empt8001
     prefer-ip-address: true
 info: 
-  app.name: SpringCloud-dept
+  app.name: SpringCloud-empt
   company.name: www.zhangguimin.cn
   build.artifactId: SpringCloud-empt-8001
   build.version: 0.0.1-SNAPSHOT

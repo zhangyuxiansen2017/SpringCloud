@@ -92,5 +92,10 @@
 		<module>SpringCloud-empt-8001</module>
 		<module>SpringCloud-empt-80</module>
 		<module>SpringCloud-eureka-7001</module>
+		<module>SpringCloud-eureka-7002</module>
+		<module>SpringCloud-eureka-7003</module>
+		<module>SpringCloud-empt-8002</module>
+		<module>SpringCloud-empt-8003</module>
+		<module>SpringCloud-empt-80-feign</module>
 	</modules>
 </project>
