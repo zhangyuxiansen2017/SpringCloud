@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import cn.zhangguimin.entitys.Employee;
@@ -24,7 +25,13 @@ public class EmpController_Consumer {
 
 	@RequestMapping(value = "/consumer/emp/add")
 	public boolean add(Employee emp) {
-		return restTemplate.postForObject(REST_URL_PREFIX + "/emp/add", emp, Boolean.class);
+		boolean b=false;
+		try {
+			b = restTemplate.postForObject(REST_URL_PREFIX + "/emp/add", emp, Boolean.class);
+		} catch (RestClientException e) {
+			e.printStackTrace();
+		}
+		return b;
 	}
 
 	@RequestMapping(value = "/consumer/dept/get/{id}")

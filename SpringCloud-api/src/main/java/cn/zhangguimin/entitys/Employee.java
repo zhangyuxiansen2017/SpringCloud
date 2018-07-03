@@ -1,15 +1,18 @@
 package cn.zhangguimin.entitys;
 
+import java.io.Serializable;
 import java.util.Date;
 import org.springframework.format.annotation.DateTimeFormat;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
+
 @Data
 @NoArgsConstructor
 @Accessors(chain = true)
-public class Employee {
+@SuppressWarnings("serial")
+public class Employee implements Serializable{
 	private Integer empId;
 	private String empName;
 	private String gender;

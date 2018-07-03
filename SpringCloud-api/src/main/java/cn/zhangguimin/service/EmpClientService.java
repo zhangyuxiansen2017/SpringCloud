@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import cn.zhangguimin.entitys.Employee;
 
-@FeignClient(value = "SPRINGCLOUD-EMPT")
+@FeignClient(value = "SPRINGCLOUD-EMPT",fallbackFactory=EmpClientServiceFallbackFactory.class)
 public interface EmpClientService {
 
 	@RequestMapping(value = "/emp/add", method = RequestMethod.POST)
