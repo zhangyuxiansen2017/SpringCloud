@@ -10,6 +10,7 @@
 	<groupId>SpringCloud-eureka-7001</groupId>
 	<artifactId>SpringCloud-eureka-7001</artifactId>
 	<dependencies>
+		<!-- Euraka 服务端（spring-cloud-starter-eureka-server），如果客户端则没（spring-cloud-starter-eureka）-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>

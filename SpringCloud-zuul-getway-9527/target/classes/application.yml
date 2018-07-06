@@ -1,0 +1,30 @@
+server: 
+  port: 9527
+ 
+spring: 
+  application:
+    name: SpringCloud-zuul-gateway
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+  instance:
+    instance-id: gateway-9527.com
+    prefer-ip-address: true 
+ 
+ 
+zuul: 
+  #ignored-services: springcloud-empt #忽略该服务，不暴露服务名给外部
+  #prefix: /zhanguimin #设置服务前缀，访问路径必须要加此前缀
+  ignored-services: "*" #忽略所以其它前缀
+  routes: 
+    mydept.serviceId: springcloud-empt #需要映射的服务
+    mydept.path: /zgm/** #映射路径
+ 
+info: 
+  app.name: SpringCloud-empt
+  company.name: www.zhangguimin.cn
+  build.artifactId: SpringCloud-zuul-getway-9527
+  build.version: 0.0.1-SNAPSHOT
+
