@@ -8,18 +8,20 @@ import org.springframework.web.client.RestTemplate;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import com.netflix.loadbalancer.RoundRobinRule;
+
 //boot -->spring applicationContext.xml --- @Configuration配置 ConfigBean =applicationContext.xml
 @Configuration
 public class ConfigBean {
-	@Bean
-	@LoadBalanced
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
-	}
-	@Bean
-	public IRule myRule() {
-		return new RandomRule();
-	}
+    @Bean
+    @LoadBalanced
+    public RestTemplate getRestTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
+    public IRule myRule() {
+        return new RandomRule();
+    }
 }
 
 // @Bean

@@ -13,22 +13,22 @@ import cn.zhangguimin.service.EmpClientService;
 @RestController
 public class EmpController_Consumer {
 
-	@Autowired
-	private EmpClientService service;
+    @Autowired
+    private EmpClientService service;
 
-	@RequestMapping(value = "/consumer/emp/add")
-	public Integer add(Employee emp) {
-		return service.add(emp);
-	}
+    @RequestMapping(value = "/consumer/emp/add")
+    public Integer add(Employee emp) {
+        return service.add(emp);
+    }
 
-	@RequestMapping(value = "/consumer/dept/get/{id}")
-	public Employee get(@PathVariable("id") Integer id) {
-		return service.get(id);
-	}
+    @RequestMapping(value = "/consumer/dept/get/{id}")
+    public Employee get(@PathVariable("id") Integer id) {
+        return service.get(id);
+    }
 
-	@RequestMapping(value = "/consumer/dept/list")
-	public List<Employee> list() {
-		return service.list();
-	}
+    @RequestMapping(value = "/consumer/dept/list")
+    public List<Employee> list() {
+        return service.list();
+    }
 
 }

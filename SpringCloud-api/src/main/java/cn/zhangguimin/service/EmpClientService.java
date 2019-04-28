@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import cn.zhangguimin.entitys.Employee;
 
-@FeignClient(value = "SPRINGCLOUD-EMPT",fallbackFactory=EmpClientServiceFallbackFactory.class)
+@FeignClient(value = "SPRINGCLOUD-EMPT", fallbackFactory = EmpClientServiceFallbackFactory.class)
 public interface EmpClientService {
 
-	@RequestMapping(value = "/emp/add", method = RequestMethod.POST)
-	public Integer add(Employee employee);
+    @RequestMapping(value = "/emp/add", method = RequestMethod.POST)
+    public Integer add(Employee employee);
 
-	@RequestMapping(value = "/emp/list", method = RequestMethod.GET)
-	public List<Employee> list();
+    @RequestMapping(value = "/emp/list", method = RequestMethod.GET)
+    public List<Employee> list();
 
-	@RequestMapping(value = "/emp/get/{id}", method = RequestMethod.GET)
-	public Employee get(@PathVariable("id") Integer id);
+    @RequestMapping(value = "/emp/get/{id}", method = RequestMethod.GET)
+    public Employee get(@PathVariable("id") Integer id);
 }

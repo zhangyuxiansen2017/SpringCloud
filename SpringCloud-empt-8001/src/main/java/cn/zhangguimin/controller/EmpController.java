@@ -14,25 +14,25 @@ import cn.zhangguimin.service.EmployeeService;
 
 @RestController
 public class EmpController extends BaseController {
-	@Autowired
-	private EmployeeService service;
+    @Autowired
+    private EmployeeService service;
 	/*@Autowired
 	private DiscoveryClient discoveryClient;*/
 
-	@RequestMapping(value = "/emp/add", method = RequestMethod.POST)
-	public Integer add(@RequestBody Employee employee) {
+    @RequestMapping(value = "/emp/add", method = RequestMethod.POST)
+    public Integer add(@RequestBody Employee employee) {
 
-		return service.saveOrUpdate(employee);
+        return service.saveOrUpdate(employee);
 
-	}
+    }
 
-	@RequestMapping(value = "/emp/list", method = RequestMethod.GET)
-	public List<Employee> list() {
-		return service.list();
-	}
+    @RequestMapping(value = "/emp/list", method = RequestMethod.GET)
+    public List<Employee> list() {
+        return service.list();
+    }
 
-	@RequestMapping(value = "/emp/get/{id}", method = RequestMethod.GET)
-	public Employee get(@PathVariable("id") Integer id) {
-		return service.get(id);
-	}
+    @RequestMapping(value = "/emp/get/{id}", method = RequestMethod.GET)
+    public Employee get(@PathVariable("id") Integer id) {
+        return service.get(id);
+    }
 }

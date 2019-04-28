@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 @EnableHystrix
 public class SpringBootWebApplication_8001_hystrix {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootWebApplication_8001_hystrix.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootWebApplication_8001_hystrix.class, args);
+    }
 }

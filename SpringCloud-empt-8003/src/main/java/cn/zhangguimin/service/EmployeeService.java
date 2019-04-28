@@ -11,24 +11,24 @@ import cn.zhangguimin.entitys.EmployeeExample;
 
 @Service
 public class EmployeeService {
-	@Autowired
-	private EmployeeMapper mapper;
+    @Autowired
+    private EmployeeMapper mapper;
 
-	public List<Employee> list() {
-		EmployeeExample example = new EmployeeExample();
-		example.setOrderByClause("create_date DESC LIMIT 0,10");
-		return mapper.selectByExample(example);
-	}
+    public List<Employee> list() {
+        EmployeeExample example = new EmployeeExample();
+        example.setOrderByClause("create_date DESC LIMIT 0,10");
+        return mapper.selectByExample(example);
+    }
 
-	public Integer saveOrUpdate(Employee emp) {
-		if (emp.getEmpId() != null) {
-			return mapper.updateByPrimaryKey(emp);
-		} else {
-			return mapper.insertSelective(emp);
-		}
-	}
+    public Integer saveOrUpdate(Employee emp) {
+        if (emp.getEmpId() != null) {
+            return mapper.updateByPrimaryKey(emp);
+        } else {
+            return mapper.insertSelective(emp);
+        }
+    }
 
-	public Employee get(Integer id) {
-		return mapper.selectByPrimaryKey(id);
-	}
+    public Employee get(Integer id) {
+        return mapper.selectByPrimaryKey(id);
+    }
 }

@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients(basePackages= {"cn.zhangguimin"})
+@EnableFeignClients(basePackages = {"cn.zhangguimin"})
 @ComponentScan("cn.zhangguimin")
 public class SpringBootWebApplication_80_feign {
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootWebApplication_80_feign.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBootWebApplication_80_feign.class, args);
+    }
 }

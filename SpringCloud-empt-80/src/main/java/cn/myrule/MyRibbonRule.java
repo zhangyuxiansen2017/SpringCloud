@@ -7,9 +7,9 @@ import com.netflix.loadbalancer.IRule;
 
 @Configuration
 public class MyRibbonRule {
-	
-	@Bean
-	public IRule myRule() {
-		return new RandomRule_ZGM();
-	}
+
+    @Bean
+    public IRule myRule() {
+        return new RandomRule_ZGM();
+    }
 }
