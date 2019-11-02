@@ -49,7 +49,7 @@
 #### 		5.2 各微服务框架对比
 
 
-​      ￼									<img src="/store/thumbs/2019/1102/02001456hk8u.png" alt="image-20191101234723869" style="zoom: 50%;" />
+​      ￼									<img src="https://www.z-gm.com/store/thumbs/2019/1102/02001456hk8u.png" alt="image-20191101234723869" style="zoom: 50%;" />
 
 ##  
 
@@ -57,7 +57,7 @@
 
 ### 	1、是什么 
 
- ￼￼￼ 											￼￼<img src="/store/thumbs/2019/1102/02001656zxrt.png" alt="image-20191101235221606" style="zoom:33%;" />    
+ ￼￼￼ 											￼￼<img src="https://www.z-gm.com/store/thumbs/2019/1102/02001656zxrt.png" alt="image-20191101235221606" style="zoom:33%;" />    
 
 ​		SpringCloud，基于SpringBoot提供了一套微服务解决方案，包括服务注册与发现，配置中心，全链路监控，服务网关，负载均衡，熔断器等组件，除了基于NetFlix的开源组件做高度抽象封装之外，还有一些选型中立的开源组件。 		                  	    SpringCloud利用SpringBoot的开发便利性巧妙地简化了分布式系统基础设施的开发，SpringCloud为开发人员提供了快速构建分布式系统的一些工具， 包括配置管理、服务发现、断路器、路由、微代理、事件总线、全局锁、决策竞选、分布式会话等等 ,它们都可以用SpringBoot的开发风格做到一键启动和部署。
 ​		SpringBoot并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来，通过SpringBoot风格进行再封装屏蔽掉了复杂的配置和实现原理， 最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。
@@ -69,7 +69,7 @@
 
 #### 		1.2 我们把SpringCloud VS DUBBO进行一番对比  
 
-<img src="/store/thumbs/2019/1102/02001818c00c.png" alt="image-20191101235714500" style="zoom:50%;" />
+<img src="https://www.z-gm.com/store/thumbs/2019/1102/02001818c00c.png" alt="image-20191101235714500" style="zoom:50%;" />
 
 ​		**最大区别**：SpringCloud抛弃了Dubbo的RPC通信，采用的是基于HTTP的REST方式。严格来说，这两种方式各有优劣。虽然从一定程度上来说，后者牺牲了服务调用的性能，但也避免了上面提到的原生RPC带来的问题。而且REST相比RPC更为灵活，服务提供方和调用方的依赖只依靠一纸契约，不存在代码级别的强依赖，这在强调快速演化的微服务环境下，显得更加合适。 
 
